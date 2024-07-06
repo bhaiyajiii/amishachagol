@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="letter-box" onclick="openLetterBox()">
+        <div class="heart">
+            💖
+        </div>
+        <p class="touch-here">Touch Here</p>
+    </div>
+    <div class="vintage-paper hidden" id="page-container">
+        <div class="page active" id="page1" style="background-color: #aa6094;">
+            <h1>Happy Birthday, [AMISHA(Chagol)]!</h1>
+        </div>
+        <div class="page" id="page2" style="background-color: #497a9c;">
+            <h2>Hey! Amisha</h2>
+            <p>You are my today and...</p>
+            <p>all of my tomorrows.</p>
+            <p>You're the icing to my cake...</p>
+            <p>Happy Birthday,Chagol.</p>
+        </div>
+        <div class="page" id="page3" style="background-color: #6b8d6e;">
+            <h2>Memories</h2>
+            <div class="gallery">
+                <img src="imagesphoto1.jpg" alt="Photo 1">
+                <img src="imagesphoto2.jpg" alt="Photo 2">
+               
+                <video controls>
+                    <source src="videosvideo1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="page" id="page5" style="background-color: #af798b;">
+            <h2>Special Moments</h2>
+            <div class="photo-grid">
+                <img src="imagesphoto3.jpg" alt="Photo 3">
+                <img src="imagesphoto4.jpg" alt="Photo 4">
+                <img src="imagesphoto5.jpg" alt="Photo 5">
+                <img src="imagesphoto6.jpg" alt="Photo 6">
+                <video controls>
+                    <source src="videosvideo2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <video controls>
+                    <source src="videosvideo3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <p class="falling-hearts">
+                
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+                <span class="heart">&#10084;</span>
+
+                <!-- Add more hearts as needed -->
+            </p>
+            <div class="notes">
+                <p>Thank you for being my everything.</p>
+                <p>Here's to many more beautiful memories together.</p>
+            </div>
+        </div>
+        <div class="navigation">
+            <button class="nav-button" data-direction="prev" onclick="navigatePages('prev')">❤️ Previous ❤️</button>
+            <button class="nav-button" data-direction="next" onclick="navigatePages('next')">❤️ Next ❤️</button>
+        </div>
+        <div class="timer">
+            <p>THE WORLD JUST GOT LUCKIER SINCE:</p>
+            <div id="countdown"></div>
+        </div>        
+        
+    </div>
+    <audio id="background-music" loop autoplay>
+        <source src="your-music-file.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script src="scripts.js"></script>
+    <script>
+<script>
+    function startCountdown(targetDate) {
+        function updateCountdown() {
+            const now = new Date();
+            const timeDifference = now - targetDate;
+
+            const hours = Math.floor(timeDifference / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDifference / (1000 * 60)) % 60);
+            const seconds = Math.floor((timeDifference / 1000) % 60);
+
+            const countdown = document.getElementById('countdown');
+            countdown.textContent = `${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call to display the countdown immediately
+    }
+
+    // Set the target date to July 7, 2007
+    const targetDate = new Date('2007-07-07T00:00:00');
+    startCountdown(targetDate);
+</script>
+
+    
+</body>
+</html>
